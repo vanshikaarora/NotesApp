@@ -135,7 +135,10 @@ public class MainActivity extends AppCompatActivity {
         //checkBox.setVisibility(View.GONE);
         fab.setVisibility(View.VISIBLE);
         fab2.setVisibility(View.GONE);
-        fab2.setVisibility(View.GONE);
+        fab3.setVisibility(View.GONE);
+        boolean bool = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean("DeleteEnabled",true);
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean("DeleteEnabled",!bool).commit();
+        adapter.notifyDataSetChanged();
         Toast.makeText(MainActivity.this,"Cancelled",Toast.LENGTH_SHORT).show();
       }
     });
@@ -167,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         fab3.setVisibility(View.VISIBLE);
         return true;
       case R.id.secure:
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         ////Get "hasLoggedIn" value. If the value doesn't exist yet false is returned
         boolean hasLoggedIn = settings.getBoolean("firstTime", false);
 

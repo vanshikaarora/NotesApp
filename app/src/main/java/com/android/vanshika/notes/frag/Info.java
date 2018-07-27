@@ -108,6 +108,9 @@ public class Info extends AppCompatActivity {
         new task2().execute("");
         fab2.setVisibility(View.GONE);
         fab3.setVisibility(View.GONE);
+        Intent intent = getIntent();
+        startActivity(intent);
+        finish();
         Toast.makeText(Info.this,"Action successfully performed",Toast.LENGTH_SHORT).show();
       }
     });
@@ -116,7 +119,10 @@ public class Info extends AppCompatActivity {
         //checkBox.setVisibility(View.GONE);
         fab.setVisibility(View.VISIBLE);
         fab2.setVisibility(View.GONE);
-        fab2.setVisibility(View.GONE);
+        //fab2.setVisibility(View.GONE);
+        boolean bool = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean("DeleteEnabled",true);
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean("DeleteEnabled",!bool).commit();
+        adapter.notifyDataSetChanged();
         fab3.setVisibility(View.GONE);
       }
     });
@@ -137,8 +143,8 @@ public class Info extends AppCompatActivity {
 
   @Override public void onBackPressed() {
     super.onBackPressed();
-    Intent intent=new Intent(Info.this, MainActivity.class);
-    startActivity(intent);
+    //Intent intent=new Intent(Info.this, MainActivity.class);
+    //startActivity(intent);
     finish();
   }
   public class task1 extends AsyncTask<String,String,String> {

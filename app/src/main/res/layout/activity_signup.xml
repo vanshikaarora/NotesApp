@@ -9,7 +9,7 @@
       android:id="@+id/fullscreen_content"
       android:paddingTop="20dp"
       android:background="@drawable/finalimage"
-      android:alpha="0.3"
+      android:alpha="0.7"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:orientation="vertical"
