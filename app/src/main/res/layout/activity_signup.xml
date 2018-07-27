@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    >
+  <LinearLayout
+      android:id="@+id/fullscreen_content"
+      android:paddingTop="20dp"
+      android:background="@drawable/finalimage"
+      android:alpha="0.3"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+      <TextView
+          android:id="@+id/welc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:keepScreenOn="true"
+          android:text="WELCOME"
+          android:textColor="@color/white"
+          android:textSize="50sp"
+          android:textStyle="bold"
+          />
+      <TextView
+          android:id="@+id/intro"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:paddingTop="10dp"
+          android:keepScreenOn="true"
+          android:text="Now keep all your details secured at one place!"
+          android:textColor="@color/white"
+          android:textSize="25sp"
+
+          />
+      <TextView
+          android:id="@+id/createNew"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:paddingTop="10dp"
+          android:keepScreenOn="true"
+          android:text="Create a security pin"
+          android:textColor="@color/white"
+          android:textSize="25sp"
+          android:textStyle="bold"
+          />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="25dp"
+        >
+      <EditText
+          android:id="@+id/es1"
+          android:layout_marginHorizontal="15dp"
+          android:layout_width="30dp"
+          android:layout_height="wrap_content"
+          android:maxLength="1"
+          android:inputType="numberPassword"
+          />
+      <EditText
+          android:id="@+id/es2"
+          android:layout_marginHorizontal="15dp"
+          android:layout_width="30dp"
+          android:layout_height="wrap_content"
+          android:maxLength="1"
+          android:inputType="numberPassword"
+          />
+      <EditText
+          android:id="@+id/es3"
+          android:layout_marginHorizontal="15dp"
+          android:layout_width="30dp"
+          android:layout_height="wrap_content"
+          android:maxLength="1"
+          android:inputType="numberPassword"
+          />
+      <EditText
+          android:id="@+id/es4"
+          android:layout_marginHorizontal="15dp"
+          android:layout_width="30dp"
+          android:layout_height="wrap_content"
+          android:maxLength="1"
+          android:inputType="numberPassword"
+          />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/black_overlay"
+        android:layout_marginTop="180dp"
+        >
+      <TextView
+          android:id="@+id/dummy_button"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:gravity="center_horizontal"
+          android:text="Continue"
+          android:textColor="@color/white"
+          android:textSize="40dp"
+          />
+
+
+    </LinearLayout>
+  </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="courses.android.com.todo.MainActivity">
+
+  <item
+      android:id="@+id/action_settings"
+      android:orderInCategory="100"
+      android:title="@string/delete_items"
+      app:showAsAction="never"/>
+  <item
+      android:id="@+id/secure"
+      android:layout_gravity="right"
+      android:icon="@drawable/lock"
+      android:title="@string/abc_search_hint"
+      app:showAsAction="always" />
+
+</menu>
